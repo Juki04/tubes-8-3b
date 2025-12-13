@@ -10,7 +10,7 @@ on:
 jobs:
   # =======================================================
   # JOB 1: BACKEND_LOGIC_TESTS (Tim A & C)
-  # Fokus: Stabilitas PHP, Keamanan, dan Logika Inti (Krurisal)
+  # Fokus: Stabilitas PHP, Keamanan, dan Logika Inti (Krusial)
   # =======================================================
   backend_logic_tests:
     runs-on: ubuntu-latest
@@ -45,6 +45,13 @@ jobs:
         sleep 5 # Beri waktu server untuk start
         echo "SERVER_PID=$SERVER_PID" >> $GITHUB_ENV # Simpan PID untuk dihentikan nanti
 
+    # Task Tim C: Test Validasi Input (Baru Ditambahkan)
+    # Ini memastikan error handling berjalan sebelum logic utama diuji
+    - name: 🧪 Test 0: Validasi Data Input (Tim C)
+      run: |
+        echo "Running input validation script..."
+        php api/test_validation.php
+        
     # Task Tim A: Integration Test Logika Budgeting
     - name: 🧪 Test 1: Logika Budgeting (Diabaikan vs Dibeli)
       run: |
