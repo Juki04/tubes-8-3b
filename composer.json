@@ -1,0 +1,17 @@
+{
+    "name": "nama-proyek/bundle-budget-planner",
+    "description": "Proyek perencanaan budget dan integrasi API eBay.",
+    "type": "project",
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "files": ["api/config.php"]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
