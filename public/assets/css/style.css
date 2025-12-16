@@ -1,0 +1,117 @@
+//* =====================================================
+   Tim D - Final Styling (Siap Deploy)
+   Fokus: Responsif, Branding, Status Visual Jelas
+   ===================================================== */
+
+/* ---------- Base Reset ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.text-muted {
+  color: #6b7280;
+}
+
+/* ---------- Card ---------- */
+.card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Table ---------- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+/* ---------- Status Styling (Kontrak Tim B) ---------- */
+/* Dibeli = Hijau */
+.status-dibeli {
+  background-color: #ecfdf5;
+  color: #065f46;
+  font-weight: 600;
+}
+
+/* Diabaikan = Merah */
+.status-diabaikan {
+  background-color: #fef2f2;
+  color: #991b1b;
+  font-weight: 600;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+/* ---------- Responsive Table ---------- */
+@media (max-width: 640px) {
+  .table th {
+    display: none;
+  }
+
+  .table tr {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .table td {
+    display: flex;
+    justify-content: space-between;
+  }
+}
