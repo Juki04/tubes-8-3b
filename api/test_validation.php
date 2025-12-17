@@ -66,5 +66,5 @@ run_test(
 );
 
 echo "\n--- Semua Input Validation Tests Berhasil Dijalankan ---\n";
-exit(0);
+exit(0); // Sukses
 ?>
