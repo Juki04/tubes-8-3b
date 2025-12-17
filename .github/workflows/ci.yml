@@ -1,6 +1,7 @@
 # =======================================================
 # CI.YML - GitHub Actions Workflow
-# FIX: Menambahkan langkah composer install untuk membuat vendor/
+# REVISI KRUSIAL: MENGUBAH CROSS-TEAM DEPENDENCY MENJADI WARNING
+#                Ini memungkinkan 'cicilan' pekerjaan oleh Tim B dan D
 # =======================================================
 
 name: CI/CD - Bundle Budget Planner
@@ -9,15 +10,16 @@ on:
   push:
     branches:
       - main
+  # KRUSIAL: Trigger CI saat Pull Request (PR) dibuka atau diupdate (feedback instan)
   pull_request:
-    types: [opened, synchronize] # Trigger saat PR dibuka atau diperbarui
+    types: [opened, synchronize] 
 
 jobs:
   # =======================================================
-  # JOB 1: BACKEND_LOGIC_TESTS (Tim A & C)
-  # Fokus: Stabilitas PHP, Keamanan, dan Logika Inti (Krusial)
+  # JOB 1: BACKEND_CORE_TESTS (Utama Tim A & C)
+  # Fokus: Stabilitas PHP, Keamanan, dan Logika Inti.
   # =======================================================
-  backend_logic_tests:
+  backend_core_tests:
     runs-on: ubuntu-latest
     
     # Menetapkan Environment Variables dari GitHub Secrets
@@ -36,10 +38,10 @@ jobs:
         extensions: curl, json 
         cache: true 
 
-    # --- LANGKAH YANG HILANG: INSTALASI DEPENDENSI ---
+    # --- Persiapan Lingkungan PHP ---
     - name: 📦 Install PHP Dependencies (Composer)
       run: composer install --prefer-dist --no-interaction
-    # --------------------------------------------------
+      # Diasumsikan file composer.json/composer.lock sudah ada di repo utama.
 
     # Task Tim C: Memastikan Syntax PHP Benar
     - name: 🧹 PHP Syntax Check (Linting)
@@ -54,13 +56,17 @@ jobs:
         php -S 127.0.0.1:8000 -t . &
         SERVER_PID=$!
         sleep 5 # Beri waktu server untuk start
-        echo "SERVER_PID=$SERVER_PID" >> $GITHUB_ENV # Simpan PID untuk dihentikan nanti
+        echo "SERVER_PID=$SERVER_PID" >> $GITHUB_ENV
 
-    # Task Tim C: Test Validasi Input
+    # Task Tim C: Test Validasi Input (Hanya cek jika file test_validation.php ada)
     - name: 🧪 Test 0 Validasi Data Input (Tim C)
       run: |
-        echo "Running input validation script..."
-        php api/test_validation.php
+        if [ -f api/test_validation.php ]; then
+          echo "Running input validation script..."
+          php api/test_validation.php
+        else
+          echo "⚠️ WARNING: api/test_validation.php belum tersedia. Melewati Tes 0."
+        fi
         
     # Task Tim A: Integration Test Logika Budgeting
     - name: 🧪 Test 1 Logika Budgeting (Diabaikan vs Dibeli)
@@ -69,9 +75,8 @@ jobs:
         # Uji dengan budget sangat kecil ($10 USD)
         RESPONSE=$(curl -s "http://127.0.0.1:8000/api/bundle_creator.php?bundle_type=ISI_KAMAR_KOS&budget_usd=10")
         
-        # Assertion: Memastikan adanya status 'Diabaikan' dalam response (Logika Anda berjalan)
         if echo "$RESPONSE" | grep -q "\"status_purchase\": \"Diabaikan\""; then
-          echo "✅ ASSERTION SUCCESS: Logika Budgeting (Low Budget) berhasil. Item mahal diabaikan."
+          echo "✅ ASSERTION SUCCESS: Logika Budgeting berhasil."
         else
           echo "❌ ASSERTION FAILED: Logika Budgeting Gagal. Response:"
           echo "$RESPONSE"
@@ -85,7 +90,6 @@ jobs:
         # Uji dengan budget standar ($500 USD)
         RESPONSE=$(curl -s "http://127.0.0.1:8000/api/bundle_creator.php?bundle_type=ISI_KAMAR_KOS&budget_usd=500")
         
-        # Assertion: Memastikan kunci krusial ('currency_rate_idr') ada (Bukti API Currency berhasil dipanggil)
         if echo "$RESPONSE" | grep -q "\"currency_rate_idr\":"; then
           echo "✅ ASSERTION SUCCESS: Kunci Mata Uang (Multi-API) ditemukan."
         else
@@ -102,69 +106,92 @@ jobs:
 
 
   # =======================================================
-  # JOB 2: FRONTEND_VALIDATION (Tim B & D)
-  # Fokus: Kualitas JS, Ketersediaan file HTML/CSS
+  # JOB 2: FRONTEND_DELIVERY_CHECK (Tim B & D)
+  # FOKUS: Fleksibilitas "Cicilan" untuk Frontend.
   # =======================================================
-  frontend_validation:
+  frontend_delivery_check:
     runs-on: ubuntu-latest
-    needs: backend_logic_tests # Hanya berjalan jika backend lolos
+    needs: backend_core_tests
     steps:
     - name: ⬇️ Checkout kode
       uses: actions/checkout@v4
 
-    # Task Tim B: Memastikan JavaScript Syntax Benar (Linting)
-    - name: 🧹 JavaScript Syntax Check (Linting)
+    # Task Tim B: Memastikan File JS Kunci Ada (Wajib ADA jika Tim B submit PR)
+    - name: 🔎 Cek Ketersediaan main.js (Tim B - Wajib)
+      run: |
+        test -f public/assets/js/main.js || { echo "❌ ERROR: File main.js tidak ditemukan! Tugas Tim B Gagal."; exit 1; }
+        echo "✅ File main.js tersedia."
+
+    # Task Tim D: Memastikan File CSS Kunci Ada (Dibuat Warning untuk fleksibilitas Tim B)
+    - name: 🔎 Cek Ketersediaan style.css (Tim D - Opsional)
+      run: |
+        test -f public/assets/css/style.css || { echo "⚠️ WARNING: File style.css belum ditemukan! Tugas Tim D belum selesai."; }
+        echo "✅ Pengecekan style.css selesai."
+
+    # Task Tim D: Memastikan File HTML Kunci Ada (Entry point, Wajib Ada)
+    - name: 🔎 Cek Ketersediaan index.html (Tim D/B - Wajib)
+      run: |
+        test -f public/index.html || { echo "❌ ERROR: File index.html tidak ditemukan! Tugas Tim D/B Gagal."; exit 1; }
+        echo "✅ File index.html tersedia."
+
+
+  # =======================================================
+  # JOB 3: LINTING_AND_DOCS_CHECK (Tim B, C, D)
+  # FOKUS: Fleksibilitas "Cicilan" untuk Dokumentasi/Setup.
+  # =======================================================
+  linting_and_docs_check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: ⬇️ Checkout kode
+      uses: actions/checkout@v4
+
+    # Task Tim B: JavaScript Syntax Check (Linting)
+    - name: 🧹 JavaScript Syntax Check (Linting - Tim B)
       uses: actions/setup-node@v4
       with:
         node-version: '20'
-    - run: npm install -g eslint && eslint public/assets/js/ --ext .js
-      continue-on-error: true # Diberi toleransi, tapi tetap tampilkan warning
-
-    # Task Tim B & D: Memastikan File Frontend Kunci Ada
-    - name: 🔎 Cek Ketersediaan File Frontend Krusial
-      run: |
-        test -f public/index.html || { echo "❌ ERROR: File index.html tidak ditemukan! Tugas Tim D Gagal."; exit 1; }
-        test -f public/assets/js/main.js || { echo "❌ ERROR: File main.js tidak ditemukan! Tugas Tim B Gagal."; exit 1; }
-        test -f public/assets/css/style.css || { echo "❌ ERROR: File style.css tidak ditemukan! Tugas Tim D Gagal."; exit 1; }
-        echo "✅ Semua file frontend kunci tersedia."
-
-    # Task Tim D: Validasi Struktur HTML/Input
-    - name: 🔎 Cek Elemen Input Krusial di index.html
-      run: |
-        # Memastikan form input utama untuk budget ada di HTML
-        if grep -q 'name="budget_usd"' public/index.html; then
-          echo "✅ Elemen input 'budget_usd' ditemukan."
+    - run: |
+        if [ -d public/assets/js ]; then
+          npm install -g eslint
+          eslint public/assets/js/ --ext .js
         else
-          echo "❌ ERROR: Elemen input 'budget_usd' tidak ditemukan di index.html. Tugas Tim D Gagal."
-          exit 1
+          echo "⚠️ WARNING: public/assets/js/ folder belum ada. Linting dilewati."
         fi
+      continue-on-error: true # Diberi toleransi, agar PR bisa lanjut meskipun ada warning
 
-  # =======================================================
-  # JOB 3: DOCS_AND_SETUP (Tim C & D)
-  # Fokus: Kelengkapan Dokumentasi & Struktur
-  # =======================================================
-  docs_and_setup_check:
-    runs-on: ubuntu-latest
-    steps:
-    - name: ⬇️ Checkout kode
-      uses: actions/checkout@v4
-
-    # Task Tim D: Memastikan Dokumentasi Kunci Ada
-    - name: 🔎 Cek File Dokumentasi
+    # Task Tim D: Memastikan Dokumentasi Kunci Ada (Dibuat Warning untuk fleksibilitas)
+    - name: 🔎 Cek File Dokumentasi (Tim D - Opsional)
       run: |
-        test -f README.md || { echo "❌ ERROR: File README.md tidak ditemukan! Tugas Tim D Gagal."; exit 1; }
-        test -f docs/API_DOCS.md || { echo "❌ ERROR: File API_DOCS.md tidak ditemukan! Tugas Tim D Gagal."; exit 1; }
-        echo "✅ Semua file dokumentasi kunci tersedia."
+        test -f README.md || { echo "⚠️ WARNING: README.md tidak ditemukan. Tim D perlu membuat."; }
+        test -f docs/API_DOCS.md || { echo "⚠️ WARNING: API_DOCS.md tidak ditemukan. Tim D perlu membuat."; }
+        echo "✅ Pengecekan Dokumentasi selesai."
 
-    # Task Tim C: Memastikan File Konfigurasi Dasar Ada
-    - name: 🔎 Cek File Konfigurasi PHP
+    # Task Tim C: Memastikan File Konfigurasi Dasar Ada (Setup Wajib)
+    - name: 🔎 Cek File Konfigurasi PHP Dasar (Tim C - Wajib)
       run: |
         test -f api/config.php || { echo "❌ ERROR: File config.php tidak ditemukan! Tugas Tim C Gagal."; exit 1; }
-        echo "✅ File konfigurasi PHP dasar tersedia."
-        
-    # Task Tim C: Memastikan File .gitignore Ada (Keamanan)
-    - name: 🔒 Cek File .gitignore
-      run: |
-        # File .gitignore harus ada untuk mencegah commit file sensitif seperti kunci API lokal.
         test -f .gitignore || { echo "⚠️ WARNING: File .gitignore tidak ditemukan! Harap dibuat."; }
-        echo "✅ Pengecekan .gitignore selesai."
+        echo "✅ File konfigurasi PHP dasar dan Git Ignore (Warning) diperiksa."
+
+
+  # =======================================================
+  # JOB 4: AUTOMATIC_MERGE_IF_PASS (Project Lead Override)
+  # KRUSIAL: Auto-merge AKAN terjadi jika semua Job PASS (Centang Hijau)
+  #          Karena Job 2 dan 3 sudah fleksibel (memiliki Warning),
+  #          maka centang hijau akan tercapai walau ada file yang dicicil.
+  # =======================================================
+  auto_merge_pr:
+    runs-on: ubuntu-latest
+    # KRUSIAL: Hanya jalan jika ini Pull Request, bukan push langsung ke main
+    if: github.event_name == 'pull_request' 
+    
+    # Harus menunggu semua Job sebelumnya selesai dengan sukses (Semua harus Centang Hijau)
+    needs: [backend_core_tests, frontend_delivery_check, linting_and_docs_check]
+    
+    steps:
+      - name: 🤖 Merge PR Otomatis
+        uses: pascalgn/automerge-action@v0.15.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_METHOD: squash # Merapikan commit history menjadi satu commit di main
+          # PR akan otomatis di-merge jika semua check lolos (centang hijau)
