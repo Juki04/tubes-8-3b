@@ -1,6 +1,6 @@
 # =======================================================
 # CI.YML - GitHub Actions Workflow
-# Tim C (DevOps) - Memastikan Kunci API dan Linting Kode
+# FIX: Menambahkan langkah composer install untuk membuat vendor/
 # =======================================================
 
 name: CI/CD - Bundle Budget Planner
@@ -32,9 +32,14 @@ jobs:
     - name: 🛠️ Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2' # DIREVISI: Menggunakan PHP 8.2 untuk dukungan modern
-        extensions: curl, json # KRUSIAL: Menambahkan ekstensi JSON untuk fungsi json_decode
+        php-version: '8.2'
+        extensions: curl, json 
         cache: true 
+
+    # --- LANGKAH YANG HILANG: INSTALASI DEPENDENSI ---
+    - name: 📦 Install PHP Dependencies (Composer)
+      run: composer install --prefer-dist --no-interaction
+    # --------------------------------------------------
 
     # Task Tim C: Memastikan Syntax PHP Benar
     - name: 🧹 PHP Syntax Check (Linting)
@@ -51,12 +56,10 @@ jobs:
         sleep 5 # Beri waktu server untuk start
         echo "SERVER_PID=$SERVER_PID" >> $GITHUB_ENV # Simpan PID untuk dihentikan nanti
 
-    # Task Tim C: Test Validasi Input (Baru Ditambahkan)
-    # Ini memastikan error handling berjalan sebelum logic utama diuji
+    # Task Tim C: Test Validasi Input
     - name: 🧪 Test 0: Validasi Data Input (Tim C)
       run: |
         echo "Running input validation script..."
-        # Asumsi api/test_validation.php adalah script CLI yang menguji berbagai skenario input.
         php api/test_validation.php
         
     # Task Tim A: Integration Test Logika Budgeting
