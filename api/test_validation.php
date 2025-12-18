@@ -81,7 +81,7 @@ foreach ($php_files as $file) {
  * Memeriksa apakah variabel $get_api_key telah didefinisikan di dalam bundle_creator.php.
  */
 echo " > Testing 3: API Key Definition...\n";
-$file_content = file_get_contents('bundle_creator.php');
+$file_content = file_get_contents('api/bundle_creator.php');
 if (strpos($file_content, '$get_api_key') !== false) {
     echo "    ✅ PASS: Variabel \$get_api_key ditemukan di dalam bundle_creator.php.\n";
 } else {
@@ -103,7 +103,7 @@ run_test(
  * Memeriksa file API_DOCS.md dan mencari teks "Endpoint Utama".
  */
 echo " > Testing 5: Documentation Content...\n";
-$doc_file = 'API_DOCS.md';
+$doc_file = 'docs/API_DOCS.md';
 if (file_exists($doc_file)) {
     $doc_content = file_get_contents($doc_file);
     if (strpos($doc_content, 'Endpoint Utama') !== false) {
