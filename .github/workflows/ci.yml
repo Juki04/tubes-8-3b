@@ -129,10 +129,10 @@ jobs:
         echo "✅ Pengecekan style.css selesai."
 
     # Task Tim D: Memastikan File HTML Kunci Ada (Entry point, Wajib Ada)
-    - name: 🔎 Cek Ketersediaan index.html (Tim D/B - Wajib)
+    - name: 🔎 Cek Ketersediaan index.php (Tim D/B - Wajib)
       run: |
-        test -f public/index.html || { echo "❌ ERROR: File index.html tidak ditemukan! Tugas Tim D/B Gagal."; exit 1; }
-        echo "✅ File index.html tersedia."
+        test -f public/index.php || { echo "❌ ERROR: File index.php tidak ditemukan! Tugas Tim D/B Gagal."; exit 1; }
+        echo "✅ File index.php tersedia."
 
 
   # =======================================================
