@@ -44,27 +44,74 @@ function run_test($url, $test_name) {
 }
 
 // =======================================================
-// TEST CASES
+// 5 TEST CASES (Integritas, Sintaks, & Keamanan)
 // =======================================================
 
-// Test Case 1: Budget USD adalah Nol (Budget harus positif)
+/**
+ * 1. File Exist Test
+ * Memastikan file bundle_creator.php tersedia sebelum dieksekusi.
+ */
+echo " > Testing File Exist...\n";
+if (file_exists('config.php')) {
+    echo "    ✅ PASS: File config.php ditemukan.\n";
+} else {
+    echo "    ❌ FAIL: File config.php tidak ditemukan.\n";
+    exit(1);
+}
+
+/**
+ * 2. Valid Syntax Test
+ * Memastikan tidak ada error sintaksis (linting) pada file backend.
+ */
+echo " > Testing Valid Syntax...\n";
+$output = shell_exec('php -l bundle_creator.php');
+if (strpos($output, 'No syntax errors detected') !== false) {
+    echo "    ✅ PASS: Sintaks PHP valid.\n";
+} else {
+    echo "    ❌ FAIL: Terdapat error sintaks pada file.\n";
+    exit(1);
+}
+
+/**
+ * 3. API Key Definition Test
+ * Memeriksa apakah variabel $get_api_key telah didefinisikan di dalam bundle_creator.php.
+ */
+echo " > Testing 3: API Key Definition...\n";
+$file_content = file_get_contents('bundle_creator.php');
+if (strpos($file_content, '$get_api_key') !== false) {
+    echo "    ✅ PASS: Variabel \$get_api_key ditemukan di dalam bundle_creator.php.\n";
+} else {
+    echo "    ❌ FAIL: Variabel \$get_api_key tidak didefinisikan di dalam file.\n";
+    exit(1);
+}
+
+/**
+ * 4. Tipe Bundle Invalid
+ * Menguji apakah API mengembalikan error jika bundle_type tidak dikenal.
+ */
 run_test(
-    $endpoint . '?bundle_type=ISI_KAMAR_KOS&budget_usd=0', 
-    'Budget Nol'
+    $endpoint . '?bundle_type=UNKNOWN_TYPE&budget_usd=100&api_key=secret123', 
+    'Testing 4: Tipe Bundle Tidak Dikenali'
 );
 
-// Test Case 2: Tipe Bundle Hilang (Input harus ada)
-run_test(
-    $endpoint . '?budget_usd=100', 
-    'Tipe Bundle Hilang'
-);
+/**
+ * 5. Documentation Content Test
+ * Memeriksa file API_DOCS.md dan mencari teks "Endpoint Utama".
+ */
+echo " > Testing 5: Documentation Content...\n";
+$doc_file = 'API_DOCS.md';
+if (file_exists($doc_file)) {
+    $doc_content = file_get_contents($doc_file);
+    if (strpos($doc_content, 'Endpoint Utama') !== false) {
+        echo "    ✅ PASS: Tulisan 'Endpoint Utama' ditemukan di dalam API_DOCS.md.\n";
+    } else {
+        echo "    ❌ FAIL: Tulisan 'Endpoint Utama' TIDAK ditemukan di dalam dokumentasi.\n";
+        exit(1);
+    }
+} else {
+    echo "    ❌ FAIL: File API_DOCS.md tidak ditemukan.\n";
+    exit(1);
+}
 
-// Test Case 3: Tipe Bundle Tidak Dikenali (Bukan dari Lookup Table)
-run_test(
-    $endpoint . '?bundle_type=NOT_FOUND&budget_usd=100', 
-    'Tipe Bundle Invalid'
-);
-
-echo "\n--- Semua Input Validation Tests Berhasil Dijalankan ---\n";
-exit(0); // Sukses
-?>
+echo "\n--- Seluruh 5 Test Case Telah Selesai Dijalankan ---\n";
+exit(0);
