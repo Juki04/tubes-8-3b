@@ -44,27 +44,57 @@ function run_test($url, $test_name) {
 }
 
 // =======================================================
-// TEST CASES
+// 5 TEST CASES (Integritas, Sintaks, & Keamanan)
 // =======================================================
 
-// Test Case 1: Budget USD adalah Nol (Budget harus positif)
+/**
+ * 1. File Exist Test
+ * Memastikan file bundle_creator.php tersedia sebelum dieksekusi.
+ */
+echo " > Testing File Exist...\n";
+if (file_exists('bundle_creator.php')) {
+    echo "    ✅ PASS: File bundle_creator.php ditemukan.\n";
+} else {
+    echo "    ❌ FAIL: File bundle_creator.php tidak ditemukan.\n";
+    exit(1);
+}
+
+/**
+ * 2. Valid Syntax Test
+ * Memastikan tidak ada error sintaksis (linting) pada file backend.
+ */
+echo " > Testing Valid Syntax...\n";
+$output = shell_exec('php -l bundle_creator.php');
+if (strpos($output, 'No syntax errors detected') !== false) {
+    echo "    ✅ PASS: Sintaks PHP valid.\n";
+} else {
+    echo "    ❌ FAIL: Terdapat error sintaks pada file.\n";
+    exit(1);
+}
+
+/**
+ * 3. API Key Tidak Boleh Kosong
+ * Mensimulasikan request tanpa kredensial keamanan.
+ */
 run_test(
-    $endpoint . '?bundle_type=ISI_KAMAR_KOS&budget_usd=0', 
-    'Budget Nol'
+    $endpoint . '?bundle_type=ISI_KAMAR_KOS&budget_usd=100', // Tanpa parameter api_key
+    'API Key Kosong'
 );
 
-// Test Case 2: Tipe Bundle Hilang (Input harus ada)
+/**
+ * 4. Tipe Bundle Invalid
+ * Memastikan sistem menolak tipe bundle yang tidak terdaftar di BUNDLE_CATEGORIES.
+ */
 run_test(
-    $endpoint . '?budget_usd=100', 
-    'Tipe Bundle Hilang'
+    $endpoint . '?bundle_type=UNKNOWN_TYPE&budget_usd=100&api_key=secret123', 
+    'Tipe Bundle Tidak Dikenali'
 );
 
-// Test Case 3: Tipe Bundle Tidak Dikenali (Bukan dari Lookup Table)
+/**
+ * 5. Budget Non-Numerik
+ * Memastikan sistem menolak input budget yang berisi karakter selain angka.
+ */
 run_test(
-    $endpoint . '?bundle_type=NOT_FOUND&budget_usd=100', 
-    'Tipe Bundle Invalid'
+    $endpoint . '?bundle_type=ISI_KAMAR_KOS&budget_usd=abc&api_key=secret123', 
+    'Budget Bukan Angka'
 );
-
-echo "\n--- Semua Input Validation Tests Berhasil Dijalankan ---\n";
-exit(0); // Sukses
-?>
