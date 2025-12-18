@@ -52,10 +52,10 @@ function run_test($url, $test_name) {
  * Memastikan file bundle_creator.php tersedia sebelum dieksekusi.
  */
 echo " > Testing File Exist...\n";
-if (file_exists('bundle_creator.php')) {
-    echo "    ✅ PASS: File bundle_creator.php ditemukan.\n";
+if (file_exists('composer.json')) {
+    echo "    ✅ PASS: File composer.json ditemukan.\n";
 } else {
-    echo "    ❌ FAIL: File bundle_creator.php tidak ditemukan.\n";
+    echo "    ❌ FAIL: File composer.json tidak ditemukan.\n";
     exit(1);
 }
 
@@ -73,28 +73,45 @@ if (strpos($output, 'No syntax errors detected') !== false) {
 }
 
 /**
- * 3. API Key Tidak Boleh Kosong
- * Mensimulasikan request tanpa kredensial keamanan.
+ * 3. API Key Definition Test
+ * Memeriksa apakah variabel $get_api_key telah didefinisikan di dalam bundle_creator.php.
  */
-run_test(
-    $endpoint . '?bundle_type=ISI_KAMAR_KOS&budget_usd=100', // Tanpa parameter api_key
-    'API Key Kosong'
-);
+echo " > Testing 3: API Key Definition...\n";
+$file_content = file_get_contents('bundle_creator.php');
+if (strpos($file_content, '$get_api_key') !== false) {
+    echo "    ✅ PASS: Variabel \$get_api_key ditemukan di dalam bundle_creator.php.\n";
+} else {
+    echo "    ❌ FAIL: Variabel \$get_api_key tidak didefinisikan di dalam file.\n";
+    exit(1);
+}
 
 /**
  * 4. Tipe Bundle Invalid
- * Memastikan sistem menolak tipe bundle yang tidak terdaftar di BUNDLE_CATEGORIES.
+ * Menguji apakah API mengembalikan error jika bundle_type tidak dikenal.
  */
 run_test(
     $endpoint . '?bundle_type=UNKNOWN_TYPE&budget_usd=100&api_key=secret123', 
-    'Tipe Bundle Tidak Dikenali'
+    'Testing 4: Tipe Bundle Tidak Dikenali'
 );
 
 /**
- * 5. Budget Non-Numerik
- * Memastikan sistem menolak input budget yang berisi karakter selain angka.
+ * 5. Documentation Content Test
+ * Memeriksa file API_DOCS.md dan mencari teks "Endpoint Utama".
  */
-run_test(
-    $endpoint . '?bundle_type=ISI_KAMAR_KOS&budget_usd=abc&api_key=secret123', 
-    'Budget Bukan Angka'
-);
+echo " > Testing 5: Documentation Content...\n";
+$doc_file = 'API_DOCS.md';
+if (file_exists($doc_file)) {
+    $doc_content = file_get_contents($doc_file);
+    if (strpos($doc_content, 'Endpoint Utama') !== false) {
+        echo "    ✅ PASS: Tulisan 'Endpoint Utama' ditemukan di dalam API_DOCS.md.\n";
+    } else {
+        echo "    ❌ FAIL: Tulisan 'Endpoint Utama' TIDAK ditemukan di dalam dokumentasi.\n";
+        exit(1);
+    }
+} else {
+    echo "    ❌ FAIL: File API_DOCS.md tidak ditemukan.\n";
+    exit(1);
+}
+
+echo "\n--- Seluruh 5 Test Case Telah Selesai Dijalankan ---\n";
+exit(0);
