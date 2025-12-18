@@ -17,7 +17,7 @@ Bundle Creator adalah aplikasi web berbasis PHP dan JavaScript untuk menghasilka
 
 * PHP (Native)
 * HTML, CSS, JavaScript
-* Custom CSS / Bootstrap / Tailwind (opsional)
+* 
 * PHP Built-in Server / XAMPP
 
 ---
@@ -73,8 +73,3 @@ http://localhost:8000/public/index.html
 
 ---
 
-## Anggota Tim (Opsional)
-
-* Tim A – Backend API
-* Tim B – JavaScript
-* Tim D – Documentation & Design
