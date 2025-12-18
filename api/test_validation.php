@@ -52,10 +52,10 @@ function run_test($url, $test_name) {
  * Memastikan file bundle_creator.php tersedia sebelum dieksekusi.
  */
 echo " > Testing File Exist...\n";
-if (file_exists('composer.json')) {
-    echo "    ✅ PASS: File composer.json ditemukan.\n";
+if (file_exists('config.php')) {
+    echo "    ✅ PASS: File config.php ditemukan.\n";
 } else {
-    echo "    ❌ FAIL: File composer.json tidak ditemukan.\n";
+    echo "    ❌ FAIL: File config.php tidak ditemukan.\n";
     exit(1);
 }
 
