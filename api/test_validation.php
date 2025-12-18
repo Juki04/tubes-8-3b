@@ -77,15 +77,21 @@ foreach ($php_files as $file) {
 }
 
 /**
- * 3. API Key Definition Test
- * Memeriksa apakah variabel $get_api_key telah didefinisikan di dalam bundle_creator.php.
+ * 3. API Key Retrieval Test
+ * Memeriksa bahwa `api/bundle_creator.php` memuat `config.php` dan menggunakan
+ * fungsi `get_api_key(...)` untuk mengambil `CURRENCY_API_KEY` dan `EBAY_APP_ID`.
  */
-echo " > Testing 3: API Key Definition...\n";
+echo " > Testing 3: API Key Retrieval and Config Include...\n";
 $file_content = file_get_contents('api/bundle_creator.php');
-if (strpos($file_content, '$get_api_key') !== false) {
-    echo "    ✅ PASS: Variabel \$get_api_key ditemukan di dalam bundle_creator.php.\n";
+$has_require = (strpos($file_content, "require_once 'config.php'") !== false) || (strpos($file_content, 'require_once "config.php"') !== false);
+$has_get_currency = (strpos($file_content, "get_api_key('CURRENCY_API_KEY')") !== false) || (strpos($file_content, 'get_api_key("CURRENCY_API_KEY")') !== false) || (strpos($file_content, "get_api_key( 'CURRENCY_API_KEY' )") !== false);
+$has_get_ebay = (strpos($file_content, "get_api_key('EBAY_APP_ID')") !== false) || (strpos($file_content, 'get_api_key("EBAY_APP_ID")') !== false) || (strpos($file_content, "get_api_key( 'EBAY_APP_ID' )") !== false);
+
+if ($has_require && $has_get_currency && $has_get_ebay) {
+    echo "    ✅ PASS: bundle_creator.php memuat config.php dan memanggil get_api_key untuk CURRENCY_API_KEY dan EBAY_APP_ID.\n";
 } else {
-    echo "    ❌ FAIL: Variabel \$get_api_key tidak didefinisikan di dalam file.\n";
+    echo "    ❌ FAIL: bundle_creator.php tidak memuat config.php atau tidak memanggil get_api_key untuk kunci yang diperlukan.\n";
+    echo "    Debug: require_ok=" . ($has_require ? '1' : '0') . ", currency=" . ($has_get_currency ? '1' : '0') . ", ebay=" . ($has_get_ebay ? '1' : '0') . "\n";
     exit(1);
 }
 
