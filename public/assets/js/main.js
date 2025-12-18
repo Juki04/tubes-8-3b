@@ -71,27 +71,26 @@ function renderSummary(data) {
 // ================= RENDER TABLE =================
 function renderTable(items) {
     if (!items || items.length === 0) {
-        resultsContainer.innerHTML = `
-            <div class="error-box">
-                Tidak ada item yang dapat ditampilkan
-            </div>
-        `;
+        resultsContainer.innerHTML = `<div class="error-box">Tidak ada item yang dapat ditampilkan</div>`;
         return;
     }
 
     let rows = "";
 
     items.forEach(item => {
-        const badgeClass =
-            item.status_purchase === "Dibeli"
-                ? "badge success"
-                : "badge danger";
+        const badgeClass = item.status_purchase === "Dibeli" ? "badge success" : "badge danger";
+
+        // --- BAGIAN PERUBAHAN LINK ---
+        // Jika item.link ada dan bukan "-", tampilkan tombol.
+        const linkHTML = (item.link && item.link !== "-") 
+            ? `<a href="${item.link}" target="_blank" class="btn-beli">Beli di eBay</a>` 
+            : "-";
 
         rows += `
             <tr>
                 <td>${item.name}</td>
-                <td>${item.price_idr.toLocaleString("id-ID")}</td>
-                <td>-</td>
+                <td>Rp ${item.price_idr.toLocaleString("id-ID")}</td>
+                <td>${linkHTML}</td>
                 <td>
                     <span class="${badgeClass}">
                         ${item.status_purchase}
@@ -103,19 +102,21 @@ function renderTable(items) {
 
     resultsContainer.innerHTML = `
         <div class="card">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Harga (IDR)</th>
-                        <th>Link</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${rows}
-                </tbody>
-            </table>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Harga (IDR)</th>
+                            <th>Link</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${rows}
+                    </tbody>
+                </table>
+            </div>
         </div>
     `;
 }
