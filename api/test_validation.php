@@ -64,12 +64,16 @@ if (file_exists('api/config.php')) {
  * Memastikan tidak ada error sintaksis (linting) pada file backend.
  */
 echo " > Testing Valid Syntax...\n";
-$output = shell_exec('php -l bundle_creator.php');
-if (strpos($output, 'No syntax errors detected') !== false) {
-    echo "    ✅ PASS: Sintaks PHP valid.\n";
-} else {
-    echo "    ❌ FAIL: Terdapat error sintaks pada file.\n";
-    exit(1);
+$php_files = glob('*.php');
+$syntax_valid = true;
+foreach ($php_files as $file) {
+    $output = shell_exec("php -l $file");
+    if (strpos($output, 'No syntax errors detected') === false) {
+        echo "    ✅ PASS: Sintaks PHP valid.\n";
+    } else {
+        echo "    ❌ FAIL: Terdapat error sintaks pada file.\n";
+        exit(1);
+    }
 }
 
 /**
