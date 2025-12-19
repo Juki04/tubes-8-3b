@@ -87,11 +87,16 @@ function renderTable(items) {
                 ? "badge success"
                 : "badge danger";
 
+        // Generate link cell - show button if URL exists, otherwise show "-"
+        const linkCell = item.item_url 
+            ? `<a href="${item.item_url}" target="_blank" class="btn-buy-here">Buy Here</a>`
+            : '<span class="text-muted">-</span>';
+
         rows += `
             <tr>
                 <td>${item.name}</td>
                 <td>${item.price_idr.toLocaleString("id-ID")}</td>
-                <td>-</td>
+                <td>${linkCell}</td>
                 <td>
                     <span class="${badgeClass}">
                         ${item.status_purchase}

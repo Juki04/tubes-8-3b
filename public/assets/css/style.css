@@ -126,6 +126,27 @@ tr:hover {
     color: #991b1b;
 }
 
+.btn-buy-here {
+    display: inline-block;
+    background: #3b82f6;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-buy-here:hover {
+    background: #2563eb;
+}
+
+.btn-buy-here:active {
+    background: #1d4ed8;
+}
+
 .loading {
     text-align: center;
     font-weight: 600;

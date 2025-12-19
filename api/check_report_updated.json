@@ -1,0 +1,1029 @@
+﻿{
+    "checked_at": "2025-12-19T06:44:47+01:00",
+    "ebay_app_id_loaded": true,
+    "categories": [
+        {
+            "name": "Kebutuhan Isi Kamar Kos (Hemat)",
+            "key": "ISI_KAMAR_KOS",
+            "items": [
+                {
+                    "item_name": "Meja Lipat Belajar",
+                    "query": "table",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Sunflower Lamp  Artificial LED Night Light Flower Table Lamp Battery Operated US",
+                            "price_usd": 13.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/Sunflower-Lamp-Artificial-LED-Night-Light-Flower-Table-Lamp-Battery-Operated-US-/110588321384"
+                        },
+                        {
+                            "title": "Vintage Brass Hollywood Regency Cherub Candelabra Table Lamp",
+                            "price_usd": 33,
+                            "view_url": "https://cgi.sandbox.ebay.com/Vintage-Brass-Hollywood-Regency-Cherub-Candelabra-Table-Lamp-/110588568842"
+                        },
+                        {
+                            "title": "Italian Vintage Greek key Console Table With a Marble top and Fluted Legs",
+                            "price_usd": 33,
+                            "view_url": "https://cgi.sandbox.ebay.com/Italian-Vintage-Greek-key-Console-Table-Marble-top-and-Fluted-Legs-/110588571045"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Rak Buku Minimalis",
+                    "query": "bookshelf",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Anzu and Naisho Monogatari Seagull Bookshelf/Anzu Kanie (Author)",
+                            "price_usd": 43.9,
+                            "view_url": "https://cgi.sandbox.ebay.com/Anzu-and-Naisho-Monogatari-Seagull-Bookshelf-Anzu-Kanie-Author-/110588301725"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Lampu Meja LED",
+                    "query": "desk lamp",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Vintage Stained Glass Bowl Table Light Tiffany Bedside Mini Nightlight Desk Lamp",
+                            "price_usd": 63,
+                            "view_url": "https://cgi.sandbox.ebay.com/Vintage-Stained-Glass-Bowl-Table-Light-Tiffany-Bedside-Mini-Nightlight-Desk-Lamp-/110588292838"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Peralatan Makan Set",
+                    "query": "cutlery set",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Case Household Cutlery 9 Piece Kitchen Knife Set",
+                            "price_usd": 364.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/Case-Household-Cutlery-9-Piece-Kitchen-Knife-Set-/110588580453"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Keset Kamar Mandi",
+                    "query": "mat",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Dashboard Cover Mat Custom for Chevy Equinox 2018-24 Dash Cover Nonslip Dash Mat",
+                            "price_usd": 19.29,
+                            "view_url": "https://cgi.sandbox.ebay.com/Dashboard-Cover-Mat-Custom-Chevy-Equinox-2018-24-Dash-Cover-Nonslip-Dash-Mat-/110588577714"
+                        },
+                        {
+                            "title": "Gaiam Essentials Thick Yoga Mat",
+                            "price_usd": 21.98,
+                            "view_url": "https://cgi.sandbox.ebay.com/Gaiam-Essentials-Thick-Yoga-Mat-/110588575613"
+                        },
+                        {
+                            "title": "Gaiam Essentials Thick Yoga Mat",
+                            "price_usd": 21.98,
+                            "view_url": "https://cgi.sandbox.ebay.com/Gaiam-Essentials-Thick-Yoga-Mat-/110588575819"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Peralatan Gaming Dasar",
+            "key": "GAMING_DASAR",
+            "items": [
+                {
+                    "item_name": "Mouse Gaming Ringan",
+                    "query": "gaming mouse",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "SteelSeries Rival 3 Gaming Mouse",
+                            "price_usd": 29.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/SteelSeries-Rival-3-Gaming-Mouse-/110588575612"
+                        },
+                        {
+                            "title": "SteelSeries Rival 3 Gaming Mouse",
+                            "price_usd": 29.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/SteelSeries-Rival-3-Gaming-Mouse-/110588575815"
+                        },
+                        {
+                            "title": "SteelSeries Rival 3 Gaming Mouse",
+                            "price_usd": 29.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/SteelSeries-Rival-3-Gaming-Mouse-/110588576214"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Mousepad Besar",
+                    "query": "mouse pad",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "FGO Minamoto no Raikou Anime 3D Silicon BIG breasts Mouse Pad Mat Wrist Rest #23",
+                            "price_usd": 22.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/FGO-Minamoto-no-Raikou-Anime-3D-Silicon-BIG-breasts-Mouse-Pad-Mat-Wrist-Rest-23-/110588379395"
+                        },
+                        {
+                            "title": "RGB Glowing Pok\u00e9mon Gengar Mouse Pad (XL)-Gaming Keyboard Mat w/LED Lights",
+                            "price_usd": 60.9,
+                            "view_url": "https://cgi.sandbox.ebay.com/RGB-Glowing-Pokemon-Gengar-Mouse-Pad-XL-Gaming-Keyboard-Mat-w-LED-Lights-/110588420051?var=0"
+                        },
+                        {
+                            "title": "RGB Glowing Pok\u00e9mon Gengar Mouse Pad (XL)-Gaming Keyboard Mat w/LED Lights",
+                            "price_usd": 60.9,
+                            "view_url": "https://cgi.sandbox.ebay.com/RGB-Glowing-Pokemon-Gengar-Mouse-Pad-XL-Gaming-Keyboard-Mat-w-LED-Lights-/110588420052?var=0"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Headset Gaming Stereo",
+                    "query": "stereo gaming headset budget",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": false,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "Starter Pack Content Creator (HP)",
+            "key": "CONTENT_CREATOR",
+            "items": [
+                {
+                    "item_name": "Ring Light",
+                    "query": "Ring Light",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "NEEWER 18\" LED Ring Light Kit w/Tripod Dimmable 5600K for Makeup Phone Camera",
+                            "price_usd": 79.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/NEEWER-18-LED-Ring-Light-Kit-w-Tripod-Dimmable-5600K-Makeup-Phone-Camera-/110588370232"
+                        },
+                        {
+                            "title": "NEEWER 18\" LED Ring Light Kit w/Tripod Dimmable 5600K for Makeup Phone Camera",
+                            "price_usd": 79.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/NEEWER-18-LED-Ring-Light-Kit-w-Tripod-Dimmable-5600K-Makeup-Phone-Camera-/110588370233"
+                        },
+                        {
+                            "title": "Step Rear Bumper For 2025 Dodge RAM 1500 Steel Offroad with LED Lights & D-Rings",
+                            "price_usd": 399.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/Step-Rear-Bumper-2025-Dodge-RAM-1500-Steel-Offroad-LED-Lights-D-Rings-/110588362763"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Clip-on Mic Wireless",
+                    "query": "smartphone",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "divide? LOT WOMENS JEWELRY",
+                            "price_usd": 1,
+                            "view_url": "https://cgi.sandbox.ebay.com/divide-LOT-WOMENS-JEWELRY-/110588472997"
+                        },
+                        {
+                            "title": "Test Sandbox Item - iPhone 13",
+                            "price_usd": 2,
+                            "view_url": "https://cgi.sandbox.ebay.com/Test-Sandbox-Item-iPhone-13-/110588414895"
+                        },
+                        {
+                            "title": "iphone16-test",
+                            "price_usd": 5,
+                            "view_url": "https://cgi.sandbox.ebay.com/iphone16-test-/110588400625"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Phone Gimbal",
+                    "query": "Phone Gimbal",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "REFURBISHED| Feiyu SCORP Mini-P Kit Gimbal for Cell Phone |1.15lb (520g) Payload",
+                            "price_usd": 99,
+                            "view_url": "https://cgi.sandbox.ebay.com/REFURBISHED-Feiyu-SCORP-Mini-P-Kit-Gimbal-Cell-Phone-1-15lb-520g-Payload-/110588385205"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Alat Kebersihan Kamar Mandi",
+            "key": "KEBERSIHAN_TOILET",
+            "items": [
+                {
+                    "item_name": "Sikat Lantai Elektrik",
+                    "query": "electric spin scrubber",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": false,
+                    "matches": []
+                },
+                {
+                    "item_name": "Dispenser Sabun Otomatis",
+                    "query": "dispenser",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Classic Copper Dispenser - New, Eco, Limited",
+                            "price_usd": 29.47,
+                            "view_url": "https://cgi.sandbox.ebay.com/Classic-Copper-Dispenser-New-Eco-Limited-/110588414456"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Rak Gantung Handuk",
+                    "query": "wall mounted",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Nautical Style Retro Wall Mount Light Corridor Industrial Wrought Iron Wall Lamp",
+                            "price_usd": 44.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/Nautical-Style-Retro-Wall-Mount-Light-Corridor-Industrial-Wrought-Iron-Wall-Lamp-/110588425480?var=0"
+                        },
+                        {
+                            "title": "Nautical Style Retro Wall Mount Light Corridor Industrial Wrought Iron Wall Lamp",
+                            "price_usd": 44.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/Nautical-Style-Retro-Wall-Mount-Light-Corridor-Industrial-Wrought-Iron-Wall-Lamp-/110588425480?var=410110356240"
+                        },
+                        {
+                            "title": "Nautical Style Retro Wall Mount Light Corridor Industrial Wrought Iron Wall Lamp",
+                            "price_usd": 59.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/Nautical-Style-Retro-Wall-Mount-Light-Corridor-Industrial-Wrought-Iron-Wall-Lamp-/110588425480?var=410110356241"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Home Coffee Corner (Manual)",
+            "key": "COFFEE_STATION",
+            "items": [
+                {
+                    "item_name": "Manual Coffee Grinder",
+                    "query": "grinder",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Dewalt 20V Battey 115mm Falt Head Cordless Brushless Angle Grinder",
+                            "price_usd": 24.37,
+                            "view_url": "https://cgi.sandbox.ebay.com/Dewalt-20V-Battey-115mm-Falt-Head-Cordless-Brushless-Angle-Grinder-/110588354335"
+                        },
+                        {
+                            "title": "Industrial Angle Grinder,High Torque,11000 RPM, Adjustable Guard for Dewalt",
+                            "price_usd": 24.59,
+                            "view_url": "https://cgi.sandbox.ebay.com/Industrial-Angle-Grinder-High-Torque-11000-RPM-Adjustable-Guard-Dewalt-/110588384570"
+                        },
+                        {
+                            "title": "Industrial Angle Grinder,High Torque,11000 RPM, Adjustable Guard for Dewalt",
+                            "price_usd": 24.66,
+                            "view_url": "https://cgi.sandbox.ebay.com/Industrial-Angle-Grinder-High-Torque-11000-RPM-Adjustable-Guard-Dewalt-/110588358326"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "French Press",
+                    "query": "600ml",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Waterdrop\u00ae All Purpose Thermos Flask 600 ml - Water Bottle with Straw - Insulate",
+                            "price_usd": 45.37,
+                            "view_url": "https://cgi.sandbox.ebay.com/Waterdrop-All-Purpose-Thermos-Flask-600-ml-Water-Bottle-Straw-Insulate-/110588583081"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Timbangan Kopi Digital",
+                    "query": "digital coffee scale with timer",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": false,
+                    "matches": []
+                }
+            ]
+        },
+        {
+            "name": "WFH Setup Ergonomis",
+            "key": "WFH_ERGONOMIC",
+            "items": [
+                {
+                    "item_name": "Laptop Stand",
+                    "query": "Laptop Stand",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Rain Design mStand Laptop Stand",
+                            "price_usd": 49.9,
+                            "view_url": "https://cgi.sandbox.ebay.com/Rain-Design-mStand-Laptop-Stand-/110588575685"
+                        },
+                        {
+                            "title": "Rain Design mStand Laptop Stand",
+                            "price_usd": 49.9,
+                            "view_url": "https://cgi.sandbox.ebay.com/Rain-Design-mStand-Laptop-Stand-/110588575867"
+                        },
+                        {
+                            "title": "Rain Design mStand Laptop Stand",
+                            "price_usd": 49.9,
+                            "view_url": "https://cgi.sandbox.ebay.com/Rain-Design-mStand-Laptop-Stand-/110588576277"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Keyboard Mechanical Wireless",
+                    "query": "Keyboard Mechanical Wireless",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Keychron K2 Wireless Mechanical Keyboard - 692847b7f401c",
+                            "price_usd": 89.03,
+                            "view_url": "https://cgi.sandbox.ebay.com/Keychron-K2-Wireless-Mechanical-Keyboard-692847b7f401c-/110588571512"
+                        },
+                        {
+                            "title": "Keychron K2 Wireless Mechanical Keyboard - 6925789784418",
+                            "price_usd": 107.66,
+                            "view_url": "https://cgi.sandbox.ebay.com/Keychron-K2-Wireless-Mechanical-Keyboard-6925789784418-/110588569321"
+                        },
+                        {
+                            "title": "Keychron K2 Wireless Mechanical Keyboard - 6925789784745",
+                            "price_usd": 117.89,
+                            "view_url": "https://cgi.sandbox.ebay.com/Keychron-K2-Wireless-Mechanical-Keyboard-6925789784745-/110588569384"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Sandaran Punggung",
+                    "query": "memory foam",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "2-Pack Upgrade Memory Foam Ear Pads for Beats Solo 2 & 3 Wireless 3Colors Choice",
+                            "price_usd": 11.98,
+                            "view_url": "https://cgi.sandbox.ebay.com/2-Pack-Upgrade-Memory-Foam-Ear-Pads-Beats-Solo-2-3-Wireless-3Colors-Choice-/110588571068?var=0"
+                        },
+                        {
+                            "title": "2-Pack Upgrade Memory Foam Ear Pads for Beats Solo 2 & 3 Wireless 3Colors Choice",
+                            "price_usd": 11.98,
+                            "view_url": "https://cgi.sandbox.ebay.com/2-Pack-Upgrade-Memory-Foam-Ear-Pads-Beats-Solo-2-3-Wireless-3Colors-Choice-/110588571068?var=410110658984"
+                        },
+                        {
+                            "title": "2-Pack Upgrade Memory Foam Ear Pads for Beats Solo 2 & 3 Wireless 3Colors Choice",
+                            "price_usd": 11.98,
+                            "view_url": "https://cgi.sandbox.ebay.com/2-Pack-Upgrade-Memory-Foam-Ear-Pads-Beats-Solo-2-3-Wireless-3Colors-Choice-/110588571068?var=410110658985"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Olahraga Mandiri di Rumah",
+            "key": "HOME_GYM",
+            "items": [
+                {
+                    "item_name": "Matras Yoga",
+                    "query": "non-slip yoga mat thickened",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": false,
+                    "matches": []
+                },
+                {
+                    "item_name": "Dumbbell Set",
+                    "query": "Dumbbell Set",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Cap Barbell Cap Hex Dumbbell Set with Rack 100 LB",
+                            "price_usd": 50,
+                            "view_url": "https://cgi.sandbox.ebay.com/Cap-Barbell-Cap-Hex-Dumbbell-Set-Rack-100-LB-/110588420048"
+                        },
+                        {
+                            "title": "CAP Cast Iron Hex Dumbbell Set 100 LB w/ Rack - Adjustable",
+                            "price_usd": 51.6,
+                            "view_url": "https://cgi.sandbox.ebay.com/CAP-Cast-Iron-Hex-Dumbbell-Set-100-LB-w-Rack-Adjustable-/110588379984"
+                        },
+                        {
+                            "title": "CAP Hex Dumbbell Set 100 LB w/ A-Frame Rack - Adjustable Weights",
+                            "price_usd": 51.6,
+                            "view_url": "https://cgi.sandbox.ebay.com/CAP-Hex-Dumbbell-Set-100-LB-w-A-Frame-Rack-Adjustable-Weights-/110588379991"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Resistance Band Set",
+                    "query": "Resistance Band Set",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Gymproluxe Original Resistance Bands Bar Set - Exercise Band Set for Home Gym - ",
+                            "price_usd": 8,
+                            "view_url": "https://cgi.sandbox.ebay.com/Gymproluxe-Original-Resistance-Bands-Bar-Set-Exercise-Band-Set-Home-Gym-/110588573888"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Travelling Singkat (Backpacker)",
+            "key": "TRAVELLING_LIGHT",
+            "items": [
+                {
+                    "item_name": "Tas Ransel Kabin",
+                    "query": "carry on",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "[Unused] Snoopy Insulated Bag Navy Excellent portability! Perfect for carrying b",
+                            "price_usd": 26.04,
+                            "view_url": "https://cgi.sandbox.ebay.com/Unused-Snoopy-Insulated-Bag-Navy-Excellent-portability-Perfect-carrying-b-/110588305106"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Packing Cubes",
+                    "query": "set",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Headlight Adjuster Screw Set for Single Headlight Chevy C10 1962-1978",
+                            "price_usd": 4.74,
+                            "view_url": "https://cgi.sandbox.ebay.com/Headlight-Adjuster-Screw-Set-Single-Headlight-Chevy-C10-1962-1978-/110588585662"
+                        },
+                        {
+                            "title": "Custom Engraved Personalized Pet Tags, Dog ID Tag, Bone Aluminum Charm,2Pcs/Set",
+                            "price_usd": 4.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/Custom-Engraved-Personalized-Pet-Tags-Dog-ID-Tag-Bone-Aluminum-Charm-2Pcs-Set-/110588365977"
+                        },
+                        {
+                            "title": "Magnetic Door Catch Latch Kit Cabinet Closer Strong Ultra Thin 4mm Cupboard",
+                            "price_usd": 7.27,
+                            "view_url": "https://cgi.sandbox.ebay.com/Magnetic-Door-Catch-Latch-Kit-Cabinet-Closer-Strong-Ultra-Thin-4mm-Cupboard-/110588584196?var=410110736403"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Powerbank 20000mAh",
+                    "query": "fast charging",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "UGREEN 100W USB-C Fast Charging Cable",
+                            "price_usd": 12.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/UGREEN-100W-USB-C-Fast-Charging-Cable-/110588575604"
+                        },
+                        {
+                            "title": "UGREEN 100W USB-C Fast Charging Cable",
+                            "price_usd": 12.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/UGREEN-100W-USB-C-Fast-Charging-Cable-/110588575798"
+                        },
+                        {
+                            "title": "UGREEN 100W USB-C Fast Charging Cable",
+                            "price_usd": 12.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/UGREEN-100W-USB-C-Fast-Charging-Cable-/110588576193"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Dapur Kos Praktis",
+            "key": "DAPUR_MINIMALIS",
+            "items": [
+                {
+                    "item_name": "Panci Elektrik Multifungsi",
+                    "query": "electric cooker",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Instant Pot Duo 7-in-1 Electric Pressure Cooker - 6922d9cf53bff",
+                            "price_usd": 107.23,
+                            "view_url": "https://cgi.sandbox.ebay.com/Instant-Pot-Duo-7-in-1-Electric-Pressure-Cooker-6922d9cf53bff-/110588566727"
+                        },
+                        {
+                            "title": "Instant Pot Duo 7-in-1 Electric Pressure Cooker - 6925789784aa1",
+                            "price_usd": 136.15,
+                            "view_url": "https://cgi.sandbox.ebay.com/Instant-Pot-Duo-7-in-1-Electric-Pressure-Cooker-6925789784aa1-/110588569457"
+                        },
+                        {
+                            "title": "Instant Pot Duo 7-in-1 Electric Pressure Cooker - 69284910a357b",
+                            "price_usd": 173.2,
+                            "view_url": "https://cgi.sandbox.ebay.com/Instant-Pot-Duo-7-in-1-Electric-Pressure-Cooker-69284910a357b-/110588571551"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Air Fryer Kecil",
+                    "query": "2L",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Everywhere Crossbody Bag 2L Metal Hardware - Resale",
+                            "price_usd": 59,
+                            "view_url": "https://cgi.sandbox.ebay.com/Everywhere-Crossbody-Bag-2L-Metal-Hardware-Resale-/110588318493"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Pisau Set Dapur",
+                    "query": "stainless steel",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "12PCS Stainless Steel Bore Brush 1/4\" Wire Brush for Power Drill Cleaning Polish",
+                            "price_usd": 8.69,
+                            "view_url": "https://cgi.sandbox.ebay.com/12PCS-Stainless-Steel-Bore-Brush-1-4-Wire-Brush-Power-Drill-Cleaning-Polish-/110588576516?var=0"
+                        },
+                        {
+                            "title": "12PCS Stainless Steel Bore Brush 1/4\" Wire Brush for Power Drill Cleaning Polish",
+                            "price_usd": 8.69,
+                            "view_url": "https://cgi.sandbox.ebay.com/12PCS-Stainless-Steel-Bore-Brush-1-4-Wire-Brush-Power-Drill-Cleaning-Polish-/110588576516?var=410110665005"
+                        },
+                        {
+                            "title": "12PCS Stainless Steel Bore Brush 1/4\" Wire Brush for Power Drill Cleaning Polish",
+                            "price_usd": 8.69,
+                            "view_url": "https://cgi.sandbox.ebay.com/12PCS-Stainless-Steel-Bore-Brush-1-4-Wire-Brush-Power-Drill-Cleaning-Polish-/110588576534?var=0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sneaker Care Kit",
+            "key": "SNEAKER_CARE",
+            "items": [
+                {
+                    "item_name": "Kotak Sepatu Transparan",
+                    "query": "transparent stackable shoe box",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "6 12 24PCS Transparent Shoe Box Storage with Lid Stackable Shoe Rack Organizer",
+                            "price_usd": 29.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/6-12-24PCS-Transparent-Shoe-Box-Storage-Lid-Stackable-Shoe-Rack-Organizer-/110588305641?var=0"
+                        },
+                        {
+                            "title": "6 12 24PCS Transparent Shoe Box Storage with Lid Stackable Shoe Rack Organizer",
+                            "price_usd": 29.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/6-12-24PCS-Transparent-Shoe-Box-Storage-Lid-Stackable-Shoe-Rack-Organizer-/110588305641?var=410110223938"
+                        },
+                        {
+                            "title": "6 12 24PCS Transparent Shoe Box Storage with Lid Stackable Shoe Rack Organizer",
+                            "price_usd": 29.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/6-12-24PCS-Transparent-Shoe-Box-Storage-Lid-Stackable-Shoe-Rack-Organizer-/110588305641?var=410110223941"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Pembersih Sepatu Set",
+                    "query": "brush",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "12PCS Stainless Steel Bore Brush 1/4\" Wire Brush for Power Drill Cleaning Polish",
+                            "price_usd": 8.69,
+                            "view_url": "https://cgi.sandbox.ebay.com/12PCS-Stainless-Steel-Bore-Brush-1-4-Wire-Brush-Power-Drill-Cleaning-Polish-/110588576516?var=0"
+                        },
+                        {
+                            "title": "12PCS Stainless Steel Bore Brush 1/4\" Wire Brush for Power Drill Cleaning Polish",
+                            "price_usd": 8.69,
+                            "view_url": "https://cgi.sandbox.ebay.com/12PCS-Stainless-Steel-Bore-Brush-1-4-Wire-Brush-Power-Drill-Cleaning-Polish-/110588576516?var=410110665005"
+                        },
+                        {
+                            "title": "12PCS Stainless Steel Bore Brush 1/4\" Wire Brush for Power Drill Cleaning Polish",
+                            "price_usd": 8.69,
+                            "view_url": "https://cgi.sandbox.ebay.com/12PCS-Stainless-Steel-Bore-Brush-1-4-Wire-Brush-Power-Drill-Cleaning-Polish-/110588576534?var=0"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Deodorizer Sepatu",
+                    "query": "balls",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "4Pcs 2Inch ICE Balls Maker Round Sphere Tray Mold Cube Whiskey Ball Cocktails ",
+                            "price_usd": 7.64,
+                            "view_url": "https://cgi.sandbox.ebay.com/4Pcs-2Inch-ICE-Balls-Maker-Round-Sphere-Tray-Mold-Cube-Whiskey-Ball-Cocktails-/110588426454"
+                        },
+                        {
+                            "title": "Probrico Soft Close Full Extension Drawer Slides Ball Bearing Side or Rear Mount",
+                            "price_usd": 8.07,
+                            "view_url": "https://cgi.sandbox.ebay.com/Probrico-Soft-Close-Full-Extension-Drawer-Slides-Ball-Bearing-Side-Rear-Mount-/110588398839?var=0"
+                        },
+                        {
+                            "title": "Probrico Soft Close Full Extension Drawer Slides Ball Bearing Side or Rear Mount",
+                            "price_usd": 8.07,
+                            "view_url": "https://cgi.sandbox.ebay.com/Probrico-Soft-Close-Full-Extension-Drawer-Slides-Ball-Bearing-Side-Rear-Mount-/110588398839?var=410110317462"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Smart Home Dasar",
+            "key": "SMART_HOME_BUDGET",
+            "items": [
+                {
+                    "item_name": "Smart Bulb RGB",
+                    "query": "rgb",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "1-8PK LED Solar Power Fence Lights Deck Door Wall Stair Step Outdoor Garden Lamp",
+                            "price_usd": 7.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/1-8PK-LED-Solar-Power-Fence-Lights-Deck-Door-Wall-Stair-Step-Outdoor-Garden-Lamp-/110588569151?var=410110658113"
+                        },
+                        {
+                            "title": "1-8PK LED Solar Power Fence Lights Deck Door Wall Stair Step Outdoor Garden Lamp",
+                            "price_usd": 7.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/1-8PK-LED-Solar-Power-Fence-Lights-Deck-Door-Wall-Stair-Step-Outdoor-Garden-Lamp-/110588569152?var=410110658617"
+                        },
+                        {
+                            "title": "7 LED Outdoor Solar Spotlight light Lawn Footpath Lights Waterproof Garden Lamp",
+                            "price_usd": 11.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/7-LED-Outdoor-Solar-Spotlight-light-Lawn-Footpath-Lights-Waterproof-Garden-Lamp-/110588466719?var=410110479241"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Smart Plug",
+                    "query": "socket",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "CRAFTSMAN 57 Piece Mechanics Tool Set Home Tool Set, Sockets, Ratchet, Screwdriv",
+                            "price_usd": 8,
+                            "view_url": "https://cgi.sandbox.ebay.com/CRAFTSMAN-57-Piece-Mechanics-Tool-Set-Home-Tool-Set-Sockets-Ratchet-Screwdriv-/110588573903"
+                        },
+                        {
+                            "title": "3-Piece Socket Swivel Adapter Set Impact Universal Joint Set 1/2\", 3/8\" and 1/4\"",
+                            "price_usd": 19.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/3-Piece-Socket-Swivel-Adapter-Set-Impact-Universal-Joint-Set-1-2-3-8-and-1-4-/110588425113"
+                        },
+                        {
+                            "title": "(10 PACK) 7/8\"-9 x 3\" FLAT COUNTERSUNK SOCKET CAP SCREW ALLOY THERMAL BLACK FT",
+                            "price_usd": 29.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/10-PACK-7-8-9-x-3-FLAT-COUNTERSUNK-SOCKET-CAP-SCREW-ALLOY-THERMAL-BLACK-FT-/110588584738"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Universal IR Remote",
+                    "query": "wifi",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Wifi Card T77z371.03 Notebook Laptop",
+                            "price_usd": 1.13,
+                            "view_url": "https://cgi.sandbox.ebay.com/Wifi-Card-T77z371-03-Notebook-Laptop-/110588584244?var=0"
+                        },
+                        {
+                            "title": "Wifi Card T77z371.03 Notebook Laptop",
+                            "price_usd": 1.13,
+                            "view_url": "https://cgi.sandbox.ebay.com/Wifi-Card-T77z371-03-Notebook-Laptop-/110588584244?var=410110737522"
+                        },
+                        {
+                            "title": "Wifi Card T77z371.03 Notebook Laptop",
+                            "price_usd": 1.13,
+                            "view_url": "https://cgi.sandbox.ebay.com/Wifi-Card-T77z371-03-Notebook-Laptop-/110588584244?var=410110737523"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Alat Pertukangan Dasar",
+            "key": "DIY_TOOLS",
+            "items": [
+                {
+                    "item_name": "Obeng Set Presisi",
+                    "query": "repair kit",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Sun Visor Repair Kit For Jeep Wrangler JK JL Gladiator 18-22 Fix Sagging Visor",
+                            "price_usd": 9.83,
+                            "view_url": "https://cgi.sandbox.ebay.com/Sun-Visor-Repair-Kit-Jeep-Wrangler-JK-JL-Gladiator-18-22-Fix-Sagging-Visor-/110588569193"
+                        },
+                        {
+                            "title": "40Pcs Car Body Dent Repair Puller Hammer Dent Repair Kit  Hail Tool",
+                            "price_usd": 17.98,
+                            "view_url": "https://cgi.sandbox.ebay.com/40Pcs-Car-Body-Dent-Repair-Puller-Hammer-Dent-Repair-Kit-Hail-Tool-/110588322035"
+                        },
+                        {
+                            "title": "43Pcs Brass DOT Air Brake Line Fittings Assortment Kit Air Hose Tube Repair Kit",
+                            "price_usd": 91.9,
+                            "view_url": "https://cgi.sandbox.ebay.com/43Pcs-Brass-DOT-Air-Brake-Line-Fittings-Assortment-Kit-Air-Hose-Tube-Repair-Kit-/110588414843"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Meteran Digital/Fisik",
+                    "query": "5m",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Do Not Bid Or Buy Test Auction 5m12evgv",
+                            "price_usd": 0.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/Do-Not-Bid-Buy-Test-Auction-5m12evgv-/110588399115"
+                        },
+                        {
+                            "title": "4-Way Industrial Handheld Endoscope 4.3 IPS 1080P HD 5M Borescope Snake Camera",
+                            "price_usd": 249,
+                            "view_url": "https://cgi.sandbox.ebay.com/4-Way-Industrial-Handheld-Endoscope-4-3-IPS-1080P-HD-5M-Borescope-Snake-Camera-/110588332996"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Palu Kambing",
+                    "query": "steel",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Test Brand EDI 00005 - FREE SHIPPING!",
+                            "price_usd": 1,
+                            "view_url": "https://cgi.sandbox.ebay.com/Test-Brand-EDI-00005-FREE-SHIPPING-/110588420188"
+                        },
+                        {
+                            "title": "Test Brand EDI 00004 - FREE SHIPPING!",
+                            "price_usd": 1,
+                            "view_url": "https://cgi.sandbox.ebay.com/Test-Brand-EDI-00004-FREE-SHIPPING-/110588420190"
+                        },
+                        {
+                            "title": "Test Brand EDI 00001 - FREE SHIPPING!",
+                            "price_usd": 1,
+                            "view_url": "https://cgi.sandbox.ebay.com/Test-Brand-EDI-00001-FREE-SHIPPING-/110588420193"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Kesehatan Udara Kamar",
+            "key": "AIR_PURITY",
+            "items": [
+                {
+                    "item_name": "Air Purifier Portable",
+                    "query": "air purifier",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "( Lot of 3 ) NAPA GOLD 7909 OIL FILTER CARTRIDGE",
+                            "price_usd": 67,
+                            "view_url": "https://cgi.sandbox.ebay.com/Lot-3-NAPA-GOLD-7909-OIL-FILTER-CARTRIDGE-/110588417720"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Humidifier / Diffuser",
+                    "query": "diffuser",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Lens Filter Set ND8/16/32/64/128 CPL MC-UV Set For DJI  Pocket 3 Carema",
+                            "price_usd": 10.59,
+                            "view_url": "https://cgi.sandbox.ebay.com/Lens-Filter-Set-ND8-16-32-64-128-CPL-MC-UV-Set-DJI-Pocket-3-Carema-/110588326271?var=410110232599"
+                        },
+                        {
+                            "title": "Lens Filter Set ND8/16/32/64/128 CPL MC-UV Set For DJI  Pocket 3 Carema",
+                            "price_usd": 10.59,
+                            "view_url": "https://cgi.sandbox.ebay.com/Lens-Filter-Set-ND8-16-32-64-128-CPL-MC-UV-Set-DJI-Pocket-3-Carema-/110588326271?var=410110232600"
+                        },
+                        {
+                            "title": "Lens Filter Set ND8/16/32/64/128 CPL MC-UV Set For DJI  Pocket 3 Carema",
+                            "price_usd": 10.59,
+                            "view_url": "https://cgi.sandbox.ebay.com/Lens-Filter-Set-ND8-16-32-64-128-CPL-MC-UV-Set-DJI-Pocket-3-Carema-/110588326271?var=410110232601"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Higrometer Digital",
+                    "query": "monitor",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "FRONTECH 15.6\" Portable LED Monitor",
+                            "price_usd": 10,
+                            "view_url": "https://cgi.sandbox.ebay.com/FRONTECH-15-6-Portable-LED-Monitor-/110588571184"
+                        },
+                        {
+                            "title": "Zebronics 15.6\u201d Portable Monitor",
+                            "price_usd": 20,
+                            "view_url": "https://cgi.sandbox.ebay.com/Zebronics-15-6-Portable-Monitor-/110588577756?var=0"
+                        },
+                        {
+                            "title": "Zebronics 15.6\u201d Portable Monitor",
+                            "price_usd": 20,
+                            "view_url": "https://cgi.sandbox.ebay.com/Zebronics-15-6-Portable-Monitor-/110588577756?var=410110665746"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Skincare Basic Starter",
+            "key": "SKINCARE_BASIC",
+            "items": [
+                {
+                    "item_name": "Sunscreen",
+                    "query": "50 face",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Lot Cabinet Hinges 1/2\" Overlay Soft Close Face Frame 105\u00b0 Compact Handware",
+                            "price_usd": 55.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/Lot-Cabinet-Hinges-1-2-Overlay-Soft-Close-Face-Frame-105-Compact-Handware-/110588322056?var=410110229520"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Facial Wash",
+                    "query": "cleanser",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "Sagrotan Washing Machine Hygienic Cleaner",
+                            "price_usd": 7.95,
+                            "view_url": "https://cgi.sandbox.ebay.com/Sagrotan-Washing-Machine-Hygienic-Cleaner-/110588583643"
+                        },
+                        {
+                            "title": "20/10pcs Microfiber Foam Sponge Applicator Pads Car Buffing Polish Wax Cleaner",
+                            "price_usd": 10.29,
+                            "view_url": "https://cgi.sandbox.ebay.com/20-10pcs-Microfiber-Foam-Sponge-Applicator-Pads-Car-Buffing-Polish-Wax-Cleaner-/110588581938?var=0"
+                        },
+                        {
+                            "title": "20/10pcs Microfiber Foam Sponge Applicator Pads Car Buffing Polish Wax Cleaner",
+                            "price_usd": 10.29,
+                            "view_url": "https://cgi.sandbox.ebay.com/20-10pcs-Microfiber-Foam-Sponge-Applicator-Pads-Car-Buffing-Polish-Wax-Cleaner-/110588581938?var=410110720525"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Moisturizer",
+                    "query": "Moisturizer",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "\u9000\u8d27\u653f\u7b56\u5df2\u53d1\u5e03-\u5220\u9664\u653f\u7b56",
+                            "price_usd": 11,
+                            "view_url": "https://cgi.sandbox.ebay.com/-/110588466839"
+                        },
+                        {
+                            "title": "Image Skincare Ormedic Lip Complex Hydrating Lip Moisturizer 15ml",
+                            "price_usd": 63.97,
+                            "view_url": "https://cgi.sandbox.ebay.com/Image-Skincare-Ormedic-Lip-Complex-Hydrating-Lip-Moisturizer-15ml-/110588584279"
+                        },
+                        {
+                            "title": "Image Skincare Ormedic Lip Complex Hydrating Lip Moisturizer 15ml",
+                            "price_usd": 110,
+                            "view_url": "https://cgi.sandbox.ebay.com/Image-Skincare-Ormedic-Lip-Complex-Hydrating-Lip-Moisturizer-15ml-/110588584400?var=0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sistem Keamanan Kamar",
+            "key": "SECURITY_KIT",
+            "items": [
+                {
+                    "item_name": "CCTV Wifi (IP Cam)",
+                    "query": "camera 1080p",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "HD 1080P 360 Bird View Panorama System Car DVR system rear camera for all car",
+                            "price_usd": 180,
+                            "view_url": "https://cgi.sandbox.ebay.com/HD-1080P-360-Bird-View-Panorama-System-Car-DVR-system-rear-camera-all-car-/110588317701"
+                        },
+                        {
+                            "title": "9.66\u2033 Rear View Mirror Camera 1080P Front and Rear Mirror Dash Cam WiFi 32GB SD",
+                            "price_usd": 209.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/9-66-Rear-View-Mirror-Camera-1080P-Front-and-Rear-Mirror-Dash-Cam-WiFi-32GB-SD-/110588356792"
+                        },
+                        {
+                            "title": "9.66\u2033 Rear View Mirror Camera 1080P Front and Rear Mirror Dash Cam WiFi 32GB SD",
+                            "price_usd": 209.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/9-66-Rear-View-Mirror-Camera-1080P-Front-and-Rear-Mirror-Dash-Cam-WiFi-32GB-SD-/110588356793"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Sensor Pintu Wifi",
+                    "query": "sensor",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": true,
+                    "matches": [
+                        {
+                            "title": "1EW63TZZAA Rear Parking Sensor Fit Dodge Durango Chrysler 300 2016~2023",
+                            "price_usd": 10.91,
+                            "view_url": "https://cgi.sandbox.ebay.com/1EW63TZZAA-Rear-Parking-Sensor-Fit-Dodge-Durango-Chrysler-300-2016-2023-/110588412033"
+                        },
+                        {
+                            "title": "Valeo Parking Sensor for VW Audi Porsche 5Q0919275AGRU 5Q0919275C 5Q0919275CGRU",
+                            "price_usd": 10.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/Valeo-Parking-Sensor-VW-Audi-Porsche-5Q0919275AGRU-5Q0919275C-5Q0919275CGRU-/110588373078"
+                        },
+                        {
+                            "title": "Animal Repeller Ultrasonic Solar Power Bird Dog Cat Skunk Deer Raccoon Repellent",
+                            "price_usd": 13.99,
+                            "view_url": "https://cgi.sandbox.ebay.com/Animal-Repeller-Ultrasonic-Solar-Power-Bird-Dog-Cat-Skunk-Deer-Raccoon-Repellent-/110588320342?var=410110226971"
+                        }
+                    ]
+                },
+                {
+                    "item_name": "Gembok Fingerprint",
+                    "query": "smart fingerprint padlock",
+                    "http_code": 200,
+                    "curl_error": "",
+                    "found": false,
+                    "matches": []
+                }
+            ]
+        }
+    ]
+}

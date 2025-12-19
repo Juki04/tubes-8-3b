@@ -95,7 +95,9 @@ foreach ($targetBundle['items'] as $itemName => $itemConfig) {
         'sortOrder' => 'PricePlusShippingLowest', 
     ]);
 
-    $itemPriceUSD = $itemConfig['max_price_usd']; // Default ke harga termahal jika API gagal/disimulasikan
+    // INISIALISASI NILAI DEFAULT
+    $itemPriceUSD = $itemConfig['max_price_usd']; // Default ke harga termahal jika API gagal
+    $itemUrl = ''; // Default kosong jika tidak ada URL
     
     // Panggilan cURL ke eBay
     $chEbay = curl_init();
@@ -106,18 +108,28 @@ foreach ($targetBundle['items'] as $itemName => $itemConfig) {
     
     $ebayData = json_decode($ebayResponse, true);
 
-    // --- Ekstraksi Harga dari Respons eBay ---
-    if (isset($ebayData['findItemsByKeywordsResponse'][0]['searchResult'][0]['item'][0]['sellingStatus'][0]['currentPrice'][0]['__value__'])) {
-        $foundPrice = (float)$ebayData['findItemsByKeywordsResponse'][0]['searchResult'][0]['item'][0]['sellingStatus'][0]['currentPrice'][0]['__value__'];
+    // --- Ekstraksi Harga dan URL dari Respons eBay ---
+    if (isset($ebayData['findItemsByKeywordsResponse'][0]['searchResult'][0]['item'][0])) {
+        $item = $ebayData['findItemsByKeywordsResponse'][0]['searchResult'][0]['item'][0];
         
-        if ($foundPrice >= $itemConfig['min_price_usd'] && $foundPrice <= $itemConfig['max_price_usd']) {
-             $itemPriceUSD = $foundPrice;
-        } else {
-             $itemPriceUSD = $itemConfig['max_price_usd'];
+        // Ekstrak harga
+        if (isset($item['sellingStatus'][0]['currentPrice'][0]['__value__'])) {
+            $foundPrice = (float)$item['sellingStatus'][0]['currentPrice'][0]['__value__'];
+            
+            if ($foundPrice >= $itemConfig['min_price_usd'] && $foundPrice <= $itemConfig['max_price_usd']) {
+                 $itemPriceUSD = $foundPrice;
+            } else {
+                 $itemPriceUSD = $itemConfig['max_price_usd'];
+            }
+        }
+        
+        // Ekstrak URL - PENTING: viewItemURL ada di level item, bukan di dalam array lagi
+        if (isset($item['viewItemURL'][0])) {
+            $itemUrl = $item['viewItemURL'][0];
         }
     }
 
-    // --- Langkah 3b: LOGIKA BUDGETING ---
+    // --- Langkah 3b: LOGIKA BUDGETING (DIJALANKAN UNTUK SEMUA ITEM, BUKAN HANYA YANG ADA DARI API) ---
     if ($currentBudget >= $itemPriceUSD) {
         $currentBudget -= $itemPriceUSD;
         $purchasedItems[] = [
@@ -125,6 +137,7 @@ foreach ($targetBundle['items'] as $itemName => $itemConfig) {
             'price_usd' => $itemPriceUSD,
             'price_idr' => round($itemPriceUSD * $currencyRateIDR, 2),
             'status_purchase' => 'Dibeli',
+            'item_url' => $itemUrl,
         ];
     } else {
         $ignoredItems[] = [
@@ -132,6 +145,7 @@ foreach ($targetBundle['items'] as $itemName => $itemConfig) {
             'price_usd' => $itemPriceUSD,
             'price_idr' => round($itemPriceUSD * $currencyRateIDR, 2),
             'status_purchase' => 'Diabaikan',
+            'item_url' => $itemUrl,
         ];
     }
 }
